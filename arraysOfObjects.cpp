@@ -14,10 +14,12 @@ class Employee{
 };
 
 int main(){
-    Employee arr[2];
-    for(Employee k:arr){
-        k.set();
-        k.get();
+    Employee *ptr = new Employee[2]; // Dynamic deceleration of block of memory for our 2 employees.
+    Employee *fp = ptr; // First pointer
+    for(int i=0;i<2;i++){
+        ptr->set();
+        ptr->get();
+        ptr++;
     }
     return 0;
 }
